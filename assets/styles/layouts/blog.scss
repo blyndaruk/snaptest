@@ -1,0 +1,21 @@
+.blog {
+  display: flex;
+  align-items: flex-start;
+
+  &__aside {
+    flex-shrink: 0;
+    width: 20%;
+    margin-right: 40px;
+  }
+
+  &__content {
+    padding-left: 40px;
+    border-left: 2px solid #000000;
+  }
+
+  &__posts {
+    margin-left: -10px;
+    margin-top: -10px;
+    margin-right: -10px;
+  }
+}

@@ -20,24 +20,37 @@ export default {
   css: [
   ],
 
+  styleResources: {
+    scss: [
+      '~assets/styles/variables/_variables-dir.scss',
+      '~assets/styles/helpers/_helpers-dir.scss'
+    ]
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~plugins/services.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '~/components', extensions: ['vue'], pathPrefix: false }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // https://go.nuxtjs.dev/stylelint
+    [ 'nuxt-storm', { nested: false } ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true, // fix for breaking all page styles after changes via dev tools
   }
 }

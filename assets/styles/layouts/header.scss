@@ -1,0 +1,28 @@
+.header {
+  padding: 24px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-grow: 1;
+  }
+
+  &__title {
+    max-width: 45%;
+    padding-right: 20px;
+  }
+
+  &__search {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 10vw;
+    flex-grow: 1;
+  }
+}
