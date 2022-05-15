@@ -8,15 +8,15 @@
       <div>...</div>
     </li>
 
-    <li v-for="(num, index) in numbers" :key="index" :class="{'is-active' : n === active}">
+    <li v-for="(num, index) in numbers" :key="index" :class="{'is-active' : num === active - 1}">
       <nuxt-link to="/" @click.stop.prevent="update(num)">{{ num + 1 }}</nuxt-link>
     </li>
 
-    <li v-if="active < length-4" class="is-disabled">
+    <li v-if="active < length - 4" class="is-disabled">
       <div>...</div>
     </li>
 
-    <li v-if="active < length-4">
+    <li v-if="active < length - 4">
       <nuxt-link to="/" @click.stop.prevent="update(length - 1)">{{ length }}</nuxt-link>
     </li>
   </ul>
@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       n: 0,
-      active: 0,
+      active: 4,
       itemsLengthMock: 30,
       count: 2,
     }
@@ -53,7 +53,7 @@ export default {
       } else if (this.active > this.length - 5) {
         return this.length
       } else {
-        return this.active + 3
+        return this.active + 1
       }
     },
     numbers () {
@@ -62,14 +62,13 @@ export default {
         temp.push(i)
       }
       return temp
-    }
+    },
   },
   methods: {
     update (n) {
       this.active = n
-      // this.$dispatch('page-' + this.type, this.active)
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -49,6 +49,9 @@ export default {
   &--primary {
     font-size: 44px;
     font-weight: bold;
+    @include xs {
+      font-size: 28px;
+    }
   }
 
   @for $i from 1 through 5 {

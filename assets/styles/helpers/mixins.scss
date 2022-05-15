@@ -13,6 +13,12 @@
   }
 }
 
+@mixin xl {
+  @include r($xl) {
+    @content;
+  }
+}
+
 @mixin lg {
   @include r($lg) {
     @content;
@@ -37,6 +43,12 @@
   }
 }
 
+
+@mixin xlUp {
+  @include rmin($xl + 1) {
+    @content;
+  }
+}
 
 @mixin lgUp {
   @include rmin($lg + 1) {

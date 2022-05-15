@@ -2,15 +2,32 @@
   display: flex;
   align-items: flex-start;
 
+  @include sm {
+    display: block;
+  }
+
   &__aside {
     flex-shrink: 0;
     width: 20%;
     margin-right: 40px;
+
+    @include md {
+      width: 30%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__content {
     padding-left: 40px;
     border-left: 2px solid #333333;
+
+    @include sm {
+      padding-left: 0;
+      border: none;
+    }
   }
 
   &__posts {
@@ -23,5 +40,9 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 15px;
+
+    @include sm {
+      justify-content: center;
+    }
   }
 }
