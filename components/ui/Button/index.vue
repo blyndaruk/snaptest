@@ -48,7 +48,7 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 20px;
+  padding: 14px 28px;
   text-align: center;
   font-size: 14px;
   line-height: 1.4;

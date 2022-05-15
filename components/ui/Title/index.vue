@@ -24,8 +24,8 @@ export default {
       default: '',
     },
     clamp: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: '',
     },
   },
   computed: {
@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss">
 .title {
-  color: #000000;
+  color: #333333;
   line-height: 1.4;
 
   &--primary {

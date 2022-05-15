@@ -2,18 +2,18 @@
   $this: &;
 
   width: 100%;
-  border: 2px solid #000000;
+  border: 2px solid #333333;
   font-size: 20px;
 
   &__nav-item {
     &:not(:last-child) {
-      border-bottom: 2px solid #000000;
+      border-bottom: 2px solid #333333;
     }
 
     &.is-active {
       #{$this}__nav-title {
         background-color: #0f93cc;
-        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid #333333;
         color: #ffffff;
       }
       #{$this}__nav-content {

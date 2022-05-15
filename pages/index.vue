@@ -12,7 +12,7 @@
             <Posts />
           </div>
           <div class="blog__pagination">
-            pagination
+            <Pagination />
           </div>
         </div>
 
@@ -25,3 +25,10 @@
 export default {
 }
 </script>
+
+<style lang="scss">
+.home-page {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+</style>

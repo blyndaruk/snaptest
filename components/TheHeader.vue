@@ -7,10 +7,10 @@
         </div>
         <div class="header__right">
           <div class="header__search">
-            search
+            <Search />
           </div>
           <div class="header__nav">
-            nav
+            <Nav />
           </div>
         </div>
       </div>
